@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Überprüfung</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            background-image: url('https://files.oaiusercontent.com/file-84VsLA3YP428ew48uHZnyb?se=2025-01-14T17%3A57%3A21Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dfc5bf575-c3b0-49b9-bd4b-7f540360f7d4.webp&sig=6041mwp3EHlDIJbHgoREyijRNVk733z7KnPyUFVupiw%3D');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .captcha-container {
+            background: rgba(51, 51, 51, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            max-width: 400px;
+        }
+        .captcha-container h1 {
+            color: #ffcc00;
+            margin-bottom: 1rem;
+        }
+        .captcha-container canvas {
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .captcha-container input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 4px;
+        }
+        .captcha-container button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .captcha-container button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1114272101919117434/1328794647157276844/handshake.png?ex=6787fff3&is=6786ae73&hm=f51c4b490532b1c2e135a40e3dc402c2645dafb428fc99c76f7f765fe25645be&=&format=webp&quality=lossless&width=655&height=655">
+</head>
+<body>
+
+<div class="captcha-container">
+    <h1>Captcha Überprüfung</h1>
+    <canvas id="captcha-canvas" width="150" height="50"></canvas>
+    <input type="text" id="captcha-input" placeholder="Gib den Text ein">
+    <button onclick="checkCaptcha()">Überprüfen</button>
+    <p id="captcha-message"></p>
+</div>
+
+<script>
+    let captchaCode = '';
+
+    function generateCaptcha() {
+        const canvas = document.getElementById('captcha-canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        captchaCode = '';
+        
+        for (let i = 0; i < 6; i++) {
+            captchaCode += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+
+        ctx.font = '30px Arial';
+        ctx.fillStyle = '#ffcc00';
+        ctx.fillText(captchaCode, 10, 35);
+    }
+
+    function checkCaptcha() {
+        const userInput = document.getElementById('captcha-input').value;
+        const captchaMessage = document.getElementById('captcha-message');
+        
+        if (userInput === captchaCode) {
+            captchaMessage.textContent = "Erfolgreich! Du bist ein wahrer Bro.";
+            captchaMessage.style.color = "#00ff00";
+            setTimeout(() => {
+                window.location.href = 'brocode.html';
+            }, 1000); // 1 Sekunde Verzögerung vor der Weiterleitung
+        } else {
+            captchaMessage.textContent = "Falscher Code, bitte versuche es erneut.";
+            captchaMessage.style.color = "#ff0000";
+        }
+    }
+
+    window.onload = generateCaptcha;
+</script>
+
+</body>
+</html>

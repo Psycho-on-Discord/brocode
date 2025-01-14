@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Bro Code</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            background-image: url('https://files.oaiusercontent.com/file-84VsLA3YP428ew48uHZnyb?se=2025-01-14T17%3A57%3A21Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dfc5bf575-c3b0-49b9-bd4b-7f540360f7d4.webp&sig=6041mwp3EHlDIJbHgoREyijRNVk733z7KnPyUFVupiw%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: #eaeaea;
+        }
+    
+        header {
+            background-color: #000;
+            color: #ffcc00;
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 3px solid #ffcc00;
+        }
+    
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(51, 51, 51, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+    
+        .regel {
+            margin: 0;
+            padding: 1.5rem;
+            border-left: 5px solid #ffcc00;
+            background: rgba(68, 68, 68, 0.8);
+            border-radius: 4px;
+            flex: 1 1 calc(33.333% - 1rem);
+            box-sizing: border-box;
+        }
+    
+        .regel h2 {
+            margin: 0 0 0.5rem 0;
+            color: #ffcc00;
+            font-size: 1.5rem;
+        }
+    
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #000;
+            color: #ffcc00;
+            margin-top: 2rem;
+            width: 100%;
+            position: relative;
+            left: 0;
+        }
+    
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    
+        iframe {
+            display: none;
+        }
+    
+        @media (max-width: 768px) {
+            .regel {
+                flex: 1 1 100%;
+            }
+        }
+        #clock { font-size: 2em; }
+    </style>
+
+    <link rel="icon" href="https://media.discordapp.net/attachments/1114272101919117434/1328794647157276844/handshake.png?ex=6787fff3&is=6786ae73&hm=f51c4b490532b1c2e135a40e3dc402c2645dafb428fc99c76f7f765fe25645be&=&format=webp&quality=lossless&width=655&height=655">
+
+    </head>
+<body>
+    <header>
+        <h1>Der Bro Code</h1>
+    </header>
+
+    <iframe width="0" height="0" 
+    src="https://www.youtube.com/embed/3V-pYCGx0C4?autoplay=1&loop=1&playlist=3V-pYCGx0C4&controls=0&modestbranding=1&showinfo=0&rel=0" 
+    frameborder="0" allow="autoplay"></iframe>
+
+    <div id="clock">Loading...</div>
+    <script>
+      function updateClock() {
+        const date = new Date();
+        document.getElementById('clock').textContent = date.toLocaleString();
+      }
+  
+      updateClock();  // Initial load
+      setInterval(updateClock, 1000);  // Update every second
+    </script>
+
+    <div class="container">
+        <div class="regel">
+            <h2>Artikel 1</h2>
+            <p>Bros vor Hoes. Ein Bro stellt seine Bros immer vor romantische Interessen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 2</h2>
+            <p>Ein Bro darf einer anderen Person niemals die Existenz des Bro Codes verraten. Er ist heilig und geheim.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 3</h2>
+            <p>Wenn ein Bro eine Party gibt, ist ein anderer Bro dazu verpflichtet, mindestens eine Kiste Bier mitzubringen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 4</h2>
+            <p>Ein Bro bietet einem anderen Bro immer ein Bier an, wenn er eines für sich holt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 5</h2>
+            <p>Wenn ein Bro mit einem anderen Bro zum Sport geht, ist es verpflichtend, sich gegenseitig zu motivieren.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 6</h2>
+            <p>Ein Bro stellt sicher, dass ein anderer Bro nicht alleine trinkt, es sei denn, er möchte es ausdrücklich.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 7</h2>
+            <p>Ein Bro teilt niemals Geheimnisse eines anderen Bros ohne dessen Erlaubnis.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 8</h2>
+            <p>Ein Bro unterstützt einen anderen Bro immer bei einer neuen Herausforderung.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 9</h2>
+            <p>Ein Bro gratuliert einem anderen Bro zu seinem Erfolg, ohne neidisch zu sein.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 10</h2>
+            <p>Ein Bro nimmt niemals die letzte Scheibe Pizza, ohne vorher zu fragen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 11</h2>
+            <p>Ein Bro hilft einem anderen Bro, seine Ex zu meiden, falls notwendig.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 12</h2>
+            <p>Ein Bro gibt immer ehrliches Feedback zu einem neuen Haarschnitt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 13</h2>
+            <p>Ein Bro lässt einen anderen Bro niemals schlecht aussehen vor anderen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 14</h2>
+            <p>Ein Bro bietet seinem Bro einen Platz auf der Couch an, wenn dieser ihn braucht.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 15</h2>
+            <p>Ein Bro plant niemals ein Date am Abend eines wichtigen Spiels.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 16</h2>
+            <p>Ein Bro akzeptiert die Wahl des anderen Bros, wenn dieser sich für eine schlechte Entscheidung entscheidet, ohne ihn jedoch zu verurteilen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 17</h2>
+            <p>Ein Bro hilft seinem Bro, den größten Fehltritt eines anderen Bros zu vermeiden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 18</h2>
+            <p>Ein Bro weiß, wann es Zeit ist, das Gespräch zu beenden und das Thema zu wechseln, um unnötige Diskussionen zu vermeiden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 19</h2>
+            <p>Ein Bro hilft einem anderen Bro, sich in einem schwierigen Gespräch zu behaupten, ohne aggressiv zu sein.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 20</h2>
+            <p>Ein Bro ist immer für einen anderen Bro da, wenn er Unterstützung braucht, sei es emotional oder praktisch.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 21</h2>
+            <p>Ein Bro trägt niemals die gleichen Klamotten wie ein anderer Bro, wenn es zu Verwirrung führen könnte.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 22</h2>
+            <p>Ein Bro hilft einem anderen Bro, seine Ziele zu erreichen, ohne ihm im Weg zu stehen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 23</h2>
+            <p>Ein Bro unterstützt seinen Bro bei einem schlechten Date und sorgt dafür, dass er einen schnellen Ausweg findet.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 24</h2>
+            <p>Ein Bro kümmert sich darum, dass der andere Bro sicher nach Hause kommt, wenn dieser betrunken ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 25</h2>
+            <p>Ein Bro erklärt die Regeln von Sportarten korrekt, damit sein Bro nichts Dummes sagt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 26</h2>
+            <p>Ein Bro geht niemals zwischen zwei Bros, die sich im Streit befinden, ohne eine friedliche Lösung zu suchen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 27</h2>
+            <p>Ein Bro bietet bei einer schwierigen Entscheidung einen objektiven Rat und lässt seinen Bro nicht im Stich.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 28</h2>
+            <p>Ein Bro respektiert den Raum eines anderen Bros, wenn dieser Zeit für sich selbst braucht.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 29</h2>
+            <p>Ein Bro wird nicht bei einem anderen Bro angeben, um Eindruck zu schinden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 30</h2>
+            <p>Ein Bro sieht immer zu, dass ein anderer Bro niemals mit einer schlechten Stimmung alleine bleibt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 31</h2>
+            <p>Ein Bro schickt niemals unangemessene Nachrichten an die Ex eines anderen Bros, selbst wenn er die Absicht hat, sie nur zu trösten.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 32</h2>
+            <p>Ein Bro lässt einen anderen Bro nie im Stich, wenn es um wichtige Verpflichtungen geht, wie Prüfungen oder Prüfungen für die Arbeit.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 33</h2>
+            <p>Ein Bro sollte niemals einem anderen Bro widersprechen, wenn er schon zu spät kommt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 34</h2>
+            <p>Ein Bro sagt nie etwas, das einen anderen Bro unangemessen schlecht aussehen lässt, wenn er nicht dafür verantwortlich ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 35</h2>
+            <p>Ein Bro sollte sich niemals mit einer anderen Person über eine Schwester oder Mutter eines anderen Bros anfreunden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 36</h2>
+            <p>Ein Bro sollte bei einem anderen Bro niemals als "mütterlich" oder "weinerlich" bezeichnet werden, es sei denn, es ist in einer humorvollen Weise gemeint.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 37</h2>
+            <p>Ein Bro muss sich gegenseitig darin unterstützen, dass beide stets humorvoll bleiben, auch bei stressigen Situationen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 38</h2>
+            <p>Ein Bro muss seinen Bros bei jeder Art von Fest oder Party zur Seite stehen, um gemeinsam durch die Nacht zu gehen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 39</h2>
+            <p>Ein Bro macht keine geheimen Absprachen mit der Ex eines anderen Bros ohne dessen Wissen und Zustimmung.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 40</h2>
+            <p>Ein Bro respektiert die Entscheidungen eines anderen Bros, selbst wenn er sie nicht versteht oder mit ihnen einverstanden ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 41</h2>
+            <p>Ein Bro lässt den anderen Bro niemals ohne Rückendeckung, wenn dieser in eine schwierige Situation gerät.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 42</h2>
+            <p>Ein Bro gibt seinem anderen Bro immer eine ehrliche Antwort, auch wenn die Wahrheit schwer zu hören ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 43</h2>
+            <p>Ein Bro hilft einem anderen Bro, die richtigen Worte zu finden, wenn er mit einer schwierigen Person sprechen muss.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 44</h2>
+            <p>Ein Bro kann nie einen anderen Bro im Stich lassen, wenn dieser Hilfe bei einem Date benötigt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 45</h2>
+            <p>Ein Bro schützt immer den guten Ruf eines anderen Bros, selbst wenn dieser es in einer peinlichen Situation versaut hat.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 46</h2>
+            <p>Ein Bro hilft einem anderen Bro, seine neueste Frau oder Freundin vor bösen Kommentaren zu schützen, auch wenn er diese Kommentare für wahr hält.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 47</h2>
+            <p>Ein Bro sollte nie eine andere Bro-Party ohne vorherige Einladung betreten.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 48</h2>
+            <p>Ein Bro weiß, wie man sich aus der unangenehmen Situation rettet, wenn ein anderes Bro das Gespräch mit einer unangemessenen Bemerkung beginnt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 49</h2>
+            <p>Ein Bro verbringt nie die Nacht allein, wenn der andere Bro noch auf dem Weg nach Hause ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 50</h2>
+            <p>Ein Bro ist immer ehrlich zu einem anderen Bro, auch wenn die Wahrheit unangenehm oder peinlich sein kann.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 51</h2>
+            <p>Ein Bro nimmt niemals eine Freundin oder Partnerin eines anderen Bros mit auf eine Party oder Veranstaltung ohne dessen Zustimmung.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 52</h2>
+            <p>Ein Bro hilft immer, wenn ein anderer Bro sich von einer schlechten Beziehung oder einer Trennung erholen muss.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 53</h2>
+            <p>Ein Bro darf einen anderen Bro niemals für seine Vorlieben oder Eigenheiten verurteilen, es sei denn, diese sind wirklich schädlich oder gefährlich.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 54</h2>
+            <p>Ein Bro ist niemals eifersüchtig auf den Erfolg eines anderen Bros, sondern feiert diesen Erfolg als eigenen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 55</h2>
+            <p>Ein Bro lässt niemals zu, dass ein anderer Bro unter Druck gesetzt wird, sich gegen seine Prinzipien zu stellen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 56</h2>
+            <p>Ein Bro darf nie ein Geheimnis eines anderen Bros ohne dessen ausdrückliche Erlaubnis teilen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 57</h2>
+            <p>Ein Bro respektiert, wenn der andere Bro seine Zeit mit einem anderen Freund oder seiner Familie verbringen möchte.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 58</h2>
+            <p>Ein Bro sollte sich niemals in die Angelegenheiten eines anderen Bros einmischen, es sei denn, er wird um Hilfe gebeten.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 59</h2>
+            <p>Ein Bro zieht niemals eine Frau oder Freundin vor, wenn sein Bro in einer schwierigen Situation steckt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 60</h2>
+            <p>Ein Bro wird immer dafür sorgen, dass ein anderer Bro sicher nach Hause kommt, besonders nach einer langen Nacht.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 61</h2>
+            <p>Ein Bro teilt niemals eine peinliche Geschichte über einen anderen Bro ohne dessen Zustimmung.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 62</h2>
+            <p>Ein Bro hilft einem anderen Bro, wenn dieser in einem unerwünschten Gespräch feststeckt und einen Ausweg sucht.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 63</h2>
+            <p>Ein Bro respektiert die Entscheidung eines anderen Bros, wenn dieser keine Hilfe möchte.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 64</h2>
+            <p>Ein Bro stellt niemals den anderen Bro in Frage, wenn es um eine persönliche Angelegenheit geht, es sei denn, es geht um eine ernste Warnung.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 65</h2>
+            <p>Ein Bro lässt seinen Bro niemals im Stich, wenn dieser mit einer unangenehmen Situation konfrontiert wird.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 66</h2>
+            <p>Ein Bro schützt die Gefühle eines anderen Bros, auch wenn dies bedeutet, eine Lüge zu erzählen, um ihn zu schonen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 67</h2>
+            <p>Ein Bro hört nie auf, nach einem weiteren Bro zu suchen, der ihn bei seinen Abenteuern begleiten kann.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 68</h2>
+            <p>Ein Bro stellt sicher, dass er niemals bei einem Date oder in einer peinlichen Situation schlecht aussieht, wenn ein anderer Bro Hilfe benötigt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 69</h2>
+            <p>Ein Bro spricht niemals schlecht über einen anderen Bro, wenn er nicht sicher ist, dass dieser es selbst für nötig hält.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 70</h2>
+            <p>Ein Bro wird niemals einen anderen Bro verraten, um persönlichen Vorteil zu erzielen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 71</h2>
+            <p>Ein Bro sollte keine unangemessenen Witze auf Kosten eines anderen Bros machen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 72</h2>
+            <p>Ein Bro respektiert es, wenn der andere Bro keine weiteren Gäste bei einer Party haben möchte.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 73</h2>
+            <p>Ein Bro lässt niemals zu, dass ein anderer Bro in eine peinliche Situation gerät, in der er sich verletzt oder gedemütigt fühlt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 74</h2>
+            <p>Ein Bro zeigt immer Stärke, selbst wenn er innerlich unsicher ist, um seinem Bro zu helfen, sich selbst sicher zu fühlen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 75</h2>
+            <p>Ein Bro weiß, wann er sich zurückhalten muss, um einen anderen Bro nicht in eine unangenehme Situation zu bringen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 76</h2>
+            <p>Ein Bro schützt die Integrität eines anderen Bros, auch wenn er Fehler gemacht hat, solange es keine ernsthaften Konsequenzen hat.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 77</h2>
+            <p>Ein Bro sorgt dafür, dass sein Bro niemals in einer schlechten Umgebung bleibt, wenn er sich nicht sicher fühlt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 78</h2>
+            <p>Ein Bro unterstützt immer die Leidenschaft eines anderen Bros, auch wenn er es nicht selbst versteht.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 79</h2>
+            <p>Ein Bro respektiert es, wenn der andere Bro in einer schwierigen Zeit alleine sein möchte, aber stellt sicher, dass er bei Bedarf Hilfe anbietet.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 80</h2>
+            <p>Ein Bro wird immer versuchen, Lösungen zu finden, anstatt sich nur auf die Probleme zu konzentrieren.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 81</h2>
+            <p>Ein Bro bietet Hilfe an, auch wenn er weiß, dass der andere Bro sie nicht direkt verlangt hat.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 82</h2>
+            <p>Ein Bro wird niemals die Meinungen und Überzeugungen eines anderen Bros einfach ignorieren.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 83</h2>
+            <p>Ein Bro darf niemals einem anderen Bro seinen Erfolg vorwerfen oder ihm das Gefühl geben, weniger zu sein.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 84</h2>
+            <p>Ein Bro bleibt immer loyal zu einem anderen Bro, auch in schwierigen Momenten.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 85</h2>
+            <p>Ein Bro unterstützt den anderen Bro, wenn dieser sich vor einer schwierigen Entscheidung stellt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 86</h2>
+            <p>Ein Bro wird immer dafür sorgen, dass sein Bro niemals in einer unangemessenen Situation allein gelassen wird.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 87</h2>
+            <p>Ein Bro wird niemals versuchen, das Verhalten eines anderen Bros zu ändern, es sei denn, es geht um eine ernsthafte Sache, die sein Wohlbefinden betrifft.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 88</h2>
+            <p>Ein Bro wird immer versuchen, den Humor zu bewahren, selbst in schwierigen Situationen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 89</h2>
+            <p>Ein Bro wird niemals eine Entscheidung eines anderen Bros hinter dessen Rücken ändern oder umgehen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 90</h2>
+            <p>Ein Bro wird niemals einen anderen Bro in einer gefährlichen oder unklaren Situation ohne Unterstützung zurücklassen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 91</h2>
+            <p>Ein Bro wird niemals einen anderen Bro ausnutzen, um persönlichen Vorteil zu erlangen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 92</h2>
+            <p>Ein Bro wird immer dafür sorgen, dass ein anderer Bro sich willkommen fühlt, besonders wenn dieser neu in der Gruppe ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 93</h2>
+            <p>Ein Bro wird niemals einem anderen Bro raten, in einer schlechten Beziehung zu bleiben, wenn dieser unglücklich ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 94</h2>
+            <p>Ein Bro wird immer versuchen, seinen anderen Bro von schlechten Entscheidungen abzuhalten, wenn er weiß, dass diese langfristig schädlich sind.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 95</h2>
+            <p>Ein Bro wird niemals ein Geheimnis eines anderen Bros verraten, es sei denn, das Geheimnis gefährdet das Leben oder das Wohlbefinden eines anderen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 96</h2>
+            <p>Ein Bro hilft einem anderen Bro, wenn dieser eine wichtige Prüfung oder Aufgabe vor sich hat, und bietet Unterstützung an.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 97</h2>
+            <p>Ein Bro darf niemals die Loyalität eines anderen Bros in Frage stellen, ohne triftigen Grund.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 98</h2>
+            <p>Ein Bro wird niemals einen anderen Bro in der Öffentlichkeit bloßstellen oder ihm das Gefühl geben, unangemessen behandelt zu werden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 99</h2>
+            <p>Ein Bro stellt sicher, dass ein anderer Bro niemals das Gefühl hat, in der Gruppe ausgeschlossen zu werden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 100</h2>
+            <p>Ein Bro zeigt Respekt gegenüber den Vorlieben und Hobbys eines anderen Bros, auch wenn er diese nicht teilt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 101</h2>
+            <p>Ein Bro lässt niemals einen anderen Bro in einer schwierigen oder gefährlichen Situation allein zurück.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 102</h2>
+            <p>Ein Bro wird niemals einen anderen Bro verletzen, weder körperlich noch emotional, absichtlich oder aus Unachtsamkeit.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 103</h2>
+            <p>Ein Bro wird immer versuchen, einen anderen Bro zu beruhigen, wenn dieser nervös oder ängstlich ist.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 104</h2>
+            <p>Ein Bro wird niemals das Vertrauen eines anderen Bros brechen, es sei denn, es geht um eine Situation, die nicht mehr rückgängig gemacht werden kann.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 105</h2>
+            <p>Ein Bro wird einem anderen Bro immer helfen, wenn dieser in einer Notlage ist, sei es emotional oder finanziell.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 106</h2>
+            <p>Ein Bro wird niemals einen anderen Bro betrügen oder hintergehen, um einen persönlichen Vorteil zu erlangen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 107</h2>
+            <p>Ein Bro wird immer sicherstellen, dass ein anderer Bro sicher nach Hause kommt, besonders nach einer Nacht in der Stadt oder auf einer Party.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 108</h2>
+            <p>Ein Bro wird niemals das Wohl eines anderen Bros für persönliche Ambitionen opfern.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 109</h2>
+            <p>Ein Bro wird niemals die Privatsphäre eines anderen Bros ohne dessen Erlaubnis verletzen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 110</h2>
+            <p>Ein Bro wird einem anderen Bro immer zuhören, wenn dieser seine Gefühle oder Gedanken mitteilen möchte.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 111</h2>
+            <p>Ein Bro wird niemals die Gefühle eines anderen Bros absichtlich verletzen, es sei denn, es ist für dessen eigenes Wohl oder im Rahmen einer wichtigen Lektion notwendig.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 112</h2>
+            <p>Ein Bro wird niemals einen anderen Bro in einer peinlichen oder unangenehmen Situation in Stich lassen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 113</h2>
+            <p>Ein Bro wird immer versuchen, den guten Ruf eines anderen Bros zu bewahren und zu schützen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 114</h2>
+            <p>Ein Bro wird niemals den Rat eines anderen Bros verachten, sondern immer versuchen, ihn zu verstehen und zu respektieren.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 115</h2>
+            <p>Ein Bro wird einem anderen Bro niemals die Schuld für eigene Fehler zuschieben.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 116</h2>
+            <p>Ein Bro wird immer dafür sorgen, dass sein Verhalten nicht dazu führt, dass ein anderer Bro sich unwohl oder verunsichert fühlt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 117</h2>
+            <p>Ein Bro stellt sicher, dass sein Verhalten niemals das Vertrauen eines anderen Bros gefährdet.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 118</h2>
+            <p>Ein Bro gibt niemals auf, einen anderen Bro zu unterstützen, selbst wenn es schwierig wird.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 119</h2>
+            <p>Ein Bro wird niemals einen anderen Bro für seine eigenen Fehler verantwortlich machen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 120</h2>
+            <p>Ein Bro wird immer darauf achten, dass die Bedürfnisse seines anderen Bros respektiert werden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 121</h2>
+            <p>Ein Bro hilft einem anderen Bro, sich selbst zu verbessern, ohne diesen zu kritisieren oder zu verurteilen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 122</h2>
+            <p>Ein Bro wird immer die besten Absichten für den anderen Bro in den Vordergrund stellen, ohne in sein Leben einzugreifen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 123</h2>
+            <p>Ein Bro wird niemals zulassen, dass ein anderer Bro durch unüberlegte Handlungen Schaden nimmt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 124</h2>
+            <p>Ein Bro stellt sicher, dass ein anderer Bro sich nicht überfordert fühlt, und bietet Unterstützung an, wann immer diese benötigt wird.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 125</h2>
+            <p>Ein Bro wird niemals einem anderen Bro sein schlechtes Verhalten entschuldigen, sondern ihn dazu ermutigen, Verantwortung zu übernehmen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 126</h2>
+            <p>Ein Bro wird niemals seine Freunde im Stich lassen, um sich selbst zu bereichern.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 127</h2>
+            <p>Ein Bro lässt niemals zu, dass ein anderer Bro in eine gefährliche Situation gerät, ohne etwas zu unternehmen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 128</h2>
+            <p>Ein Bro wird niemals einen anderen Bro in einem Konflikt allein lassen, sondern immer versuchen, den Konflikt zu lösen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 129</h2>
+            <p>Ein Bro wird immer ehrlich und transparent mit einem anderen Bro umgehen, um Missverständnisse zu vermeiden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 130</h2>
+            <p>Ein Bro stellt sicher, dass ein anderer Bro sich sicher und respektiert fühlt, besonders in stressigen oder unangenehmen Situationen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 131</h2>
+            <p>Ein Bro wird niemals das Vertrauen eines anderen Bros für persönliche Gewinne oder Vorteile ausnutzen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 132</h2>
+            <p>Ein Bro respektiert die Privatsphäre und die Wünsche eines anderen Bros, ohne in seine persönlichen Angelegenheiten einzugreifen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 133</h2>
+            <p>Ein Bro wird niemals zulassen, dass ein anderer Bro in einer peinlichen oder unangemessenen Situation ohne Unterstützung bleibt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 134</h2>
+            <p>Ein Bro wird niemals einem anderen Bro das Gefühl geben, sich für seine eigenen Entscheidungen entschuldigen zu müssen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 135</h2>
+            <p>Ein Bro wird niemals einen anderen Bro für sein eigenes Versagen verantwortlich machen, sondern immer gemeinsam nach Lösungen suchen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 136</h2>
+            <p>Ein Bro unterstützt einen anderen Bro immer dabei, seine Ziele zu erreichen, ohne Neid oder Missgunst zu empfinden.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 137</h2>
+            <p>Ein Bro wird immer versuchen, einen anderen Bro zu inspirieren, sich selbst zu verbessern, ohne dabei aufdringlich zu wirken.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 138</h2>
+            <p>Ein Bro wird niemals zulassen, dass ein anderer Bro sich selbst schlecht fühlt, sondern ihm stattdessen Mut und Unterstützung bieten.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 139</h2>
+            <p>Ein Bro wird immer versuchen, einen anderen Bro zu unterstützen, selbst in schwierigen Zeiten, in denen es scheint, dass es keine Lösungen gibt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 140</h2>
+            <p>Ein Bro stellt sicher, dass ein anderer Bro immer das Gefühl hat, dass seine Meinung zählt und respektiert wird.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 141</h2>
+            <p>Ein Bro wird niemals eine negative Meinung über einen anderen Bro in der Öffentlichkeit äußern, es sei denn, es ist notwendig, um einen Fehler zu korrigieren.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 142</h2>
+            <p>Ein Bro gibt niemals auf, einen anderen Bro zu unterstützen, egal wie schwierig die Situation auch sein mag.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 143</h2>
+            <p>Ein Bro wird niemals einen anderen Bro in einer schlechten Lage alleine lassen, sondern wird ihm immer beistehen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 144</h2>
+            <p>Ein Bro wird immer sein Bestes tun, um sicherzustellen, dass ein anderer Bro keine unangenehmen Situationen durchlebt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 145</h2>
+            <p>Ein Bro wird niemals einem anderen Bro das Gefühl geben, weniger wert zu sein, nur weil er andere Vorlieben oder Interessen hat.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 146</h2>
+            <p>Ein Bro wird immer versuchen, einem anderen Bro zu helfen, seine Ziele zu erreichen, indem er Ratschläge und Unterstützung bietet.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 147</h2>
+            <p>Ein Bro wird niemals zulassen, dass ein anderer Bro unter seiner Last zusammenbricht, sondern wird immer helfen, die Last zu teilen.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 148</h2>
+            <p>Ein Bro wird immer ein Beispiel für den anderen Bro sein, indem er Verantwortung übernimmt und nicht nur an sich selbst denkt.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 149</h2>
+            <p>Ein Bro wird niemals einen anderen Bro im Stich lassen, wenn dieser ihn braucht, sondern wird immer an seiner Seite bleiben.</p>
+        </div>
+        <div class="regel">
+            <h2>Artikel 150</h2>
+            <p>Ein Bro hinterlässt die Welt ein bisschen besser, als er sie vorgefunden hat.</p>
+        </div>
+    <footer>
+        <p>&copy; 2025 Der Bro Code Website. Von Bros, für Bros.</p>
+    </footer>
+</body>
+</html>
