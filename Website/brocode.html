@@ -86,7 +86,11 @@
                 flex: 1 1 100%;
             }
         }
+        #clock { font-size: 2em; }
     </style>
+
+    <link rel="icon" href="https://media.discordapp.net/attachments/1114272101919117434/1328794647157276844/handshake.png?ex=6787fff3&is=6786ae73&hm=f51c4b490532b1c2e135a40e3dc402c2645dafb428fc99c76f7f765fe25645be&=&format=webp&quality=lossless&width=655&height=655">
+
     </head>
 <body>
     <header>
@@ -97,7 +101,16 @@
     src="https://www.youtube.com/embed/3V-pYCGx0C4?autoplay=1&loop=1&playlist=3V-pYCGx0C4&controls=0&modestbranding=1&showinfo=0&rel=0" 
     frameborder="0" allow="autoplay"></iframe>
 
-
+    <div id="clock">Loading...</div>
+    <script>
+      function updateClock() {
+        const date = new Date();
+        document.getElementById('clock').textContent = date.toLocaleString();
+      }
+  
+      updateClock();  // Initial load
+      setInterval(updateClock, 1000);  // Update every second
+    </script>
 
     <div class="container">
         <div class="regel">
@@ -701,7 +714,7 @@
             <p>Ein Bro hinterlässt die Welt ein bisschen besser, als er sie vorgefunden hat.</p>
         </div>
     <footer>
-        <p>&copy; 2025 Der Bro Code Website. Für Bros, von Bros.</p>
+        <p>&copy; 2025 Der Bro Code Website. Von Bros, für Bros.</p>
     </footer>
 </body>
 </html>
