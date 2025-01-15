@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #1b1b1b;
-            background-image: url('https://media.discordapp.net/attachments/1114272101919117434/1328805314748743680/DALLE_2025-01-14_20.17.07_-_A_dark_background_image_for_a_website_themed_around_the_Bro_Code._The_image_should_feature_a_sophisticated_and_masculine_aesthetic_with_elements_lik.png?ex=678809e3&is=6786b863&hm=dbb3cb12388b4b125c337741995fd70f1a6782e79288dc435de5ea6aa068dd25&=&format=webp&quality=lossless&width=655&height=655');
+            background-image: url('https://files.oaiusercontent.com/file-84VsLA3YP428ew48uHZnyb?se=2025-01-14T17%3A57%3A21Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dfc5bf575-c3b0-49b9-bd4b-7f540360f7d4.webp&sig=6041mwp3EHlDIJbHgoREyijRNVk733z7KnPyUFVupiw%3D');
             background-size: cover;
             background-attachment: fixed;
             color: #eaeaea;
@@ -54,13 +54,12 @@
             background-color: #e6b800;
         }
     </style>
-    <link rel="icon" href="https://media.discordapp.net/attachments/1114272101919117434/1328794647157276844/handshake.png?ex=6787fff3&is=6786ae73&hm=f51c4b490532b1c2e135a40e3dc402c2645dafb428fc99c76f7f765fe25645be&=&format=webp&quality=lossless&width=655&height=655">
 </head>
 <body>
 
 <div class="captcha-container">
     <h1>Captcha Überprüfung</h1>
-    <canvas id="captcha-canvas" width="150" height="50"></canvas>
+    <canvas id="captcha-canvas" width="200" height="70"></canvas>
     <input type="text" id="captcha-input" placeholder="Gib den Text ein">
     <button onclick="checkCaptcha()">Überprüfen</button>
     <p id="captcha-message"></p>
@@ -83,7 +82,33 @@
 
         ctx.font = '30px Arial';
         ctx.fillStyle = '#ffcc00';
-        ctx.fillText(captchaCode, 10, 35);
+        const x = 10;
+        const y = 40;
+        
+        // Zufällige Verzerrung
+        for (let i = 0; i < captchaCode.length; i++) {
+            ctx.save();
+            const angle = Math.random() * 0.3 - 0.15;
+            ctx.translate(x + i * 30, y);
+            ctx.rotate(angle);
+            ctx.fillText(captchaCode[i], 0, 0);
+            ctx.restore();
+        }
+
+        // Hintergrundlinien und Punkte
+        for (let i = 0; i < 5; i++) {
+            ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+            ctx.beginPath();
+            ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+            ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+            ctx.stroke();
+        }
+        for (let i = 0; i < 30; i++) {
+            ctx.fillStyle = 'rgba(255,255,255,0.3)';
+            ctx.beginPath();
+            ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, 1, 0, Math.PI * 2);
+            ctx.fill();
+        }
     }
 
     function checkCaptcha() {
@@ -91,7 +116,7 @@
         const captchaMessage = document.getElementById('captcha-message');
         
         if (userInput === captchaCode) {
-            captchaMessage.textContent = "Erfolgreich! Du bist ein wahrer Bro.";
+            captchaMessage.textContent = "Erfolgreich! Du bist kein Roboter.";
             captchaMessage.style.color = "#00ff00";
             setTimeout(() => {
                 window.location.href = 'brocode.html';
